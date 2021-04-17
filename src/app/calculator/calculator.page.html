@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color='dark'>
+    <ion-title color='warning' class='ion-text-center'>
+      A simple Calculator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+  <ion-content>
+    <ion-item>
+      <ion-label position="floating" color='primary'>1'st Number : </ion-label>
+      <ion-input inputmode="numeric" type='number' [(ngModel)]='num1'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color='secondary'>2'nd Number:</ion-label>
+      <ion-input inputmode="numeric" type='number' [(ngModel)]='num2'></ion-input>
+    </ion-item>
+    <ion-column>
+    <ion-button margin id='btn-add' (click)='add()'><ion-icon name='add-circle-outline'></ion-icon> add</ion-button>
+    <ion-button margin id='btn-sub' (click)='sub()'><ion-icon name="remove-circle-outline"></ion-icon> sub</ion-button>
+    <ion-button margin id='btn-mul' (click)='mul()'><ion-icon name="close-circle-outline"></ion-icon>Mult</ion-button>
+    <ion-button margin id='btn-div' (click)='div()'>/ Div</ion-button>
+    </ion-column>
+  </ion-content>
+  <ion-content>
+    <p>Answer  :  {{ans}}</p>
+  </ion-content>
